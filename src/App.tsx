@@ -2,14 +2,16 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+interface Note {
+  id: string,
+  title: string,
+  date: string,
+  text: string,
+  color: string,
+}
+
 function App() {
-  const [notes, setNotes] = useState<{
-    id: string,
-    title: string,
-    date: string,
-    text: string,
-    color: string,
-  }[]>([{
+  const [notes, setNotes] = useState<Note[]>([{
     id: (new Date).toString(),
     title: 'First Note',
     text: 'This is the first note',
