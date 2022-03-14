@@ -1,14 +1,7 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
-
-interface Note {
-  id: string,
-  title: string,
-  date: string,
-  text: string,
-  color: string,
-}
+import { Note } from './models/note.model';
+import Header from './components/Header';
 
 function App() {
   const [notes, setNotes] = useState<Note[]>([{
@@ -20,9 +13,9 @@ function App() {
   }]);
 
   return (
-    <div className="App">
-      Hello World
-    </div>
+    <>
+      <Header />
+    </>
   );
 }
 
