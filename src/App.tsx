@@ -10,7 +10,7 @@ function App() {
     id: (new Date).toString(),
     title: 'First Note',
     text: 'This is the first note',
-    color: '#ff0000',
+    color: 'lightblue',
     date: (new Date).toString(),
   }]);
 
