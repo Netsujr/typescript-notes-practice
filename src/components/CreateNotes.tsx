@@ -18,6 +18,15 @@ const CreateNotes: React.FC<ICreateNotesProps> = ({notes, setNotes}) => {
     if (titleRef.current?.value === '' || textRef.current?.value === '') {
       return setError('All fields are required');
     }
+
+    setError('');
+    setNotes([...notes,{
+      id: (new Date).toString(),
+      title: (titleRef.current as HTMLInputElement).value,
+      text: (textRef.current as HTMLTextAreaElement).value,
+      color: (colorRef.current as HTMLInputElement).value,
+      date: (new Date).toString(),
+    }]);
   };
 
   return (
