@@ -22,6 +22,7 @@ function App() {
           <Col>
             <NotesList
             notes={notes}
+            setNotes={setNotes}
             />
           </Col>
         </Row>
