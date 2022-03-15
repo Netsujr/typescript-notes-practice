@@ -21,11 +21,11 @@ const CreateNotes: React.FC<ICreateNotesProps> = ({ notes, setNotes }) => {
 
     setError('');
     setNotes([...notes, {
-      id: (new Date).toString(),
+      id: (new Date()).toString(),
       title: (titleRef.current as HTMLInputElement).value,
       text: (textRef.current as HTMLTextAreaElement).value,
       color: (colorRef.current as HTMLInputElement).value,
-      date: (new Date).toString(),
+      date: (new Date()).toString(),
     }]);
 
     (titleRef.current as HTMLInputElement).value = '';

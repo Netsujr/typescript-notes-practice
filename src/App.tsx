@@ -8,11 +8,11 @@ import { Col, Container, Row } from 'react-bootstrap';
 
 function App() {
   const [notes, setNotes] = useState<Note[]>([{
-    id: (new Date).toString(),
+    id: (new Date()).toString(),
     title: 'First Note',
     text: 'This is the first note',
     color: 'lightblue',
-    date: (new Date).toString(),
+    date: (new Date()).toString(),
   }]);
 
   return (
